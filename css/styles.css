@@ -1,0 +1,42 @@
+/* Gallery Styles */
+.gallery, .city-gallery {
+    padding: 20px;
+}
+
+.gallery h2, .city-gallery h2 {
+    font-size: 1.5em;
+    margin-top: 30px;
+    color: #333;
+}
+
+.photo {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.photo img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.photo img:hover {
+    transform: scale(1.05);
+}
+
+.city-links ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.city-links li {
+    margin: 10px 0;
+}
+
+.city-links a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
