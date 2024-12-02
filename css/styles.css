@@ -136,3 +136,50 @@ footer {
     font-size: 0.9rem;
     margin-top: 20px;
 }
+
+/* Highlight Card Container */
+.highlight-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between cards */
+}
+
+/* Individual Highlight Card */
+.highlight-card {
+    background-color: white;
+    border: 3px solid #ddd; /* Subtle border */
+    border-radius: 10px; /* Rounded corners */
+    width: 300px; /* Fixed width for uniformity */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    overflow: hidden; /* Ensures content stays within bounds */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+}
+
+/* Hover Effect for Highlight Card */
+.highlight-card:hover {
+    transform: scale(1.05); /* Slight zoom-in */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+}
+
+/* Highlight Card Image */
+.highlight-card img {
+    width: 100%; /* Full width of card */
+    height: 150px; /* Fixed height */
+    object-fit: cover; /* Crop image to fit nicely */
+    border-bottom: 3px solid #4a90e2; /* Themed bottom border */
+}
+
+/* Highlight Card Text Content */
+.highlight-card h4 {
+    font-size: 1.2rem;
+    color: #4a90e2; /* Themed title color */
+    margin: 10px;
+}
+
+.highlight-card p {
+    font-size: 1rem;
+    color: #555; /* Subtle text color */
+    margin: 0 10px 15px 10px; /* Space around the description */
+    line-height: 1.4; /* Better readability */
+}
