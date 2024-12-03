@@ -3,12 +3,12 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9; /* Light background */
-    color: #333; /* Text color */
+    background-color: #F8F9FA; /* Light gray for background */
+    color: #2D2D2D; /* Dark gray for text */
 }
 
 header {
-    background-color: #4a90e2; /* Bright blue */
+    background-color: #2C5282; /* Deep blue */
     color: white;
     padding: 1rem;
     text-align: center;
@@ -27,180 +27,87 @@ header nav a {
 
 header nav a:hover {
     text-decoration: underline;
+    color: #BFDFFF; /* Light blue for hover effect */
 }
 
-/* Hero Section */
-.hero {
+/* Hero Section (Shared Styles) */
+.hero, .events-hero, .contact-hero, .city-hero {
+    background: linear-gradient(120deg, #90CAF9, #64B5F6); /* Gradient with good contrast */
+    color: #2D2D2D; /* Dark text */
     text-align: center;
     padding: 50px 20px;
-    background: linear-gradient(120deg, #ff9a9e, #fad0c4); /* Gradient background */
-    color: white;
-    border-bottom: 5px solid #4a90e2;
+    border-bottom: 5px solid #2C5282; /* Strong color border */
 }
 
-.hero button {
-    padding: 12px 25px;
-    font-size: 1rem;
-    background-color: #4a90e2;
+.hero h2, .events-hero h2, .contact-hero h2, .city-hero h2 {
+    font-size: 2.5rem;
+    color: #2C5282;
+}
+
+.hero p, .events-hero p, .contact-hero p, .city-hero p {
+    font-size: 1.2rem;
+    color: #2D2D2D;
+}
+
+/* Buttons */
+button {
+    background: #2C5282; /* Deep blue */
     color: white;
+    font-size: 1rem;
+    padding: 12px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: background 0.3s;
 }
 
-.hero button:hover {
-    background-color: #3568a6;
+button:hover {
+    background: #1E3A5F; /* Darker blue */
 }
 
-/* City Links */
-.city-links ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
-    margin: 30px 0;
-}
-
-.city-links li {
-    margin: 10px 0;
-}
-
-.city-links a {
-    text-decoration: none;
-    color: #4a90e2;
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
-.city-links a:hover {
-    color: #3568a6;
-}
-
-/* Gallery Styles */
-.gallery, .city-gallery {
+/* Contact Form Section */
+.contact-form {
+    max-width: 600px;
+    margin: 40px auto;
     padding: 20px;
+    background: #FFFFFF;
+    color: #2D2D2D;
+    border: 1px solid #DDD;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.contact-form h3 {
+    font-size: 1.8rem;
+    color: #2C5282;
+    margin-bottom: 20px;
+}
+
+.contact-form form {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
     gap: 20px;
 }
 
-.photo-card {
-    position: relative;
-    width: 250px;
-    height: 200px;
-    overflow: hidden;
-    border: 3px solid #ddd;
-    border-radius: 10px;
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+.contact-form label {
+    color: #2C5282;
+    font-weight: bold;
 }
 
-.photo-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-}
-
-.photo-card img {
+.contact-form input, .contact-form textarea {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-bottom: 3px solid #4a90e2;
-}
-
-.photo-card .description {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
-    color: white;
-    text-align: center;
     padding: 10px;
-    font-size: 0.9rem;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.photo-card:hover .description {
-    opacity: 1;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #4a90e2;
-    color: white;
-    font-size: 0.9rem;
-    margin-top: 20px;
-}
-
-/* Highlight Card Container */
-.highlight-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px; /* Space between cards */
-}
-
-/* Individual Highlight Card */
-.highlight-card {
-    background-color: white;
-    border: 3px solid #ddd; /* Subtle border */
-    border-radius: 10px; /* Rounded corners */
-    width: 300px; /* Fixed width for uniformity */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-    overflow: hidden; /* Ensures content stays within bounds */
-    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
-}
-
-/* Hover Effect for Highlight Card */
-.highlight-card:hover {
-    transform: scale(1.05); /* Slight zoom-in */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
-}
-
-/* Highlight Card Image */
-.highlight-card img {
-    width: 100%; /* Full width of card */
-    height: 150px; /* Fixed height */
-    object-fit: cover; /* Crop image to fit nicely */
-    border-bottom: 3px solid #4a90e2; /* Themed bottom border */
-}
-
-/* Highlight Card Text Content */
-.highlight-card h4 {
-    font-size: 1.2rem;
-    color: #4a90e2; /* Themed title color */
-    margin: 10px;
-}
-
-.highlight-card p {
     font-size: 1rem;
-    color: #555; /* Subtle text color */
-    margin: 0 10px 15px 10px; /* Space around the description */
-    line-height: 1.4; /* Better readability */
+    border: 2px solid #DDD;
+    border-radius: 5px;
+    background: #F8F9FA;
+    color: #2D2D2D;
 }
 
-/* Hero Section for Events Page */
-.events-hero {
-    background: linear-gradient(120deg, #ff9a9e, #fad0c4);
-    text-align: center;
-    padding: 50px 20px;
-    color: white;
-    border-bottom: 5px solid #4a90e2;
-}
-
-.events-hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-.events-hero p {
-    font-size: 1.2rem;
-    margin: 0;
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #2C5282;
+    outline: none;
 }
 
 /* Timeline Layout */
@@ -218,7 +125,7 @@ footer {
     top: 0;
     bottom: 0;
     width: 4px;
-    background: #ddd;
+    background: #DDD;
     transform: translateX(-50%);
 }
 
@@ -244,7 +151,7 @@ footer {
     left: 50%;
     width: 20px;
     height: 20px;
-    background: #4a90e2;
+    background: #2C5282;
     border-radius: 50%;
     transform: translateX(-50%);
     z-index: 1;
@@ -261,20 +168,19 @@ footer {
 
 .event-content h3 {
     font-size: 1.2rem;
-    color: #555;
+    color: #2C5282;
     margin-bottom: 5px;
 }
 
 .event-content h4 {
     font-size: 1.5rem;
-    color: #4a90e2;
+    color: #2C5282;
     margin-bottom: 10px;
 }
 
 .event-content p {
     font-size: 1rem;
-    color: #333;
-    line-height: 1.5;
+    color: #2D2D2D;
 }
 
 .event-image {
@@ -286,88 +192,101 @@ footer {
     width: 100%;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border: 3px solid #ddd;
+    border: 3px solid #DDD;
 }
 
-/* Hero Section for Contact Page */
-.contact-hero {
-    background: linear-gradient(120deg, #84fab0, #8fd3f4); /* Gradient background */
-    text-align: center;
-    padding: 50px 20px;
-    color: white;
-    border-bottom: 5px solid #4a90e2;
-}
-
-.contact-hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-.contact-hero p {
-    font-size: 1.2rem;
-    margin: 0;
-}
-
-/* Contact Form Section */
-.contact-form {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.contact-form h3 {
-    font-size: 1.8rem;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.contact-form form {
+/* Highlight Cards */
+.highlight-grid {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
 }
 
-.form-group {
-    text-align: left;
+.highlight-card {
+    background: #FFFFFF;
+    border: 2px solid #DDD;
+    color: #2D2D2D;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 300px;
+    overflow: hidden;
 }
 
-.form-group label {
-    font-size: 1rem;
-    font-weight: bold;
-    color: #4a90e2;
+.highlight-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
-.form-group input,
-.form-group textarea {
+.highlight-card h4 {
+    color: #2C5282;
+    margin-bottom: 10px;
+}
+
+.highlight-card p {
+    color: #2D2D2D;
+    line-height: 1.5;
+}
+
+/* Gallery */
+.gallery, .city-gallery {
+    padding: 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.photo-card {
+    position: relative;
+    width: 250px;
+    height: 200px;
+    overflow: hidden;
+    border: 3px solid #DDD;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.photo-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.photo-card img {
     width: 100%;
-    padding: 10px;
-    font-size: 1rem;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    transition: border-color 0.3s;
+    height: 100%;
+    object-fit: cover;
+    border-bottom: 3px solid #2C5282;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
-    border-color: #4a90e2;
-    outline: none;
-}
-
-button {
-    padding: 12px 20px;
-    font-size: 1rem;
+.photo-card .description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
     color: white;
-    background-color: #4a90e2;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: opacity 0.3s;
 }
 
-button:hover {
-    background-color: #3568a6;
+.photo-card:hover .description {
+    opacity: 1;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2C5282;
+    color: white;
+    font-size: 0.9rem;
+    margin-top: 20px;
 }
