@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Contact Me</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="events.html">Key Events</a>
+        </nav>
+    </header>
+    <!-- Hero Section -->
+    <section class="contact-hero">
+        <h2>Get in Touch</h2>
+        <p>Have questions or feedback? I'd love to hear from you!</p>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form">
+        <h3>Send Me a Message</h3>
+        <form action="https://mockform" method="POST">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="_replyto" placeholder="Enter your email address" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message here" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Study Abroad Recap</p>
+    </footer>
+</body>
+</html>
