@@ -4,3 +4,6 @@ function scrollToContent() {
         behavior: 'smooth'
     });
 }
+function scrollToPhotos() {
+    document.querySelector('.photo-showcase').scrollIntoView({ behavior: 'smooth' });
+}
