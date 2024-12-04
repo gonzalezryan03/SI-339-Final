@@ -17,17 +17,17 @@ header {
 header nav {
     margin-top: 10px;
 }
-
+/* Navigation Links */
 header nav a {
-    color: #869fbd; 
+    color: #F7FAFC; /* Lighter text color for better contrast */
     text-decoration: none;
     font-weight: bold;
+    font-size: 1rem; /* Ensure text is legible */
 }
 
 header nav a:hover {
-    color: #1E3A5F; /* Slightly darker blue for hover state */
+    color: #E2E8F0; /* Slightly lighter hover color */
 }
-
 
 /* Hero Section (Shared Styles) */
 .hero, .events-hero, .contact-hero, .city-hero {
