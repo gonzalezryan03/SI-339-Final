@@ -19,16 +19,15 @@ header nav {
 }
 
 header nav a {
-    margin: 0 15px;
-    color: white;
+    color: #2C5282; /* Dark blue for better contrast */
     text-decoration: none;
     font-weight: bold;
 }
 
 header nav a:hover {
-    text-decoration: underline;
-    color: #BFDFFF; /* Light blue for hover effect */
+    color: #1E3A5F; /* Slightly darker blue for hover state */
 }
+
 
 /* Hero Section (Shared Styles) */
 .hero, .events-hero, .contact-hero, .city-hero {
