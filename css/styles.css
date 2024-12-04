@@ -230,13 +230,47 @@ button:hover {
     line-height: 1.5;
 }
 
-/* Gallery */
-.gallery, .city-gallery {
+/* Hero Section */
+.gallery-hero {
+    background: linear-gradient(120deg, #90CAF9, #64B5F6); /* Blue gradient */
+    text-align: center;
+    padding: 50px 20px;
+    color: white;
+    border-bottom: 5px solid #2C5282;
+}
+
+.gallery-hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.gallery-hero p {
+    font-size: 1.2rem;
+}
+
+/* Gallery Section */
+.gallery {
     padding: 40px 20px;
+    background: #F8F9FA;
+}
+
+.city-gallery {
+    margin-bottom: 40px;
+}
+
+.city-gallery h3 {
+    font-size: 1.8rem;
+    color: #2C5282;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+/* Photo Grid */
+.photo-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 20px;
+    justify-content: flex-start;
 }
 
 .photo-card {
@@ -268,7 +302,7 @@ button:hover {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
     color: white;
     text-align: center;
     padding: 10px;
@@ -276,7 +310,6 @@ button:hover {
     opacity: 0;
     transition: opacity 0.3s;
 }
-
 .photo-card:hover .description {
     opacity: 1;
 }
